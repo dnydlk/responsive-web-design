@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <h1 id="title">Title</h1>
+
+    <p id="description">Short explanation</p>
+
+    <p></p>
+
+    <form id="survey-form">
+      <label id="name-label" for="name">
+        Name
+        <input type="text" required id="name" placeholder="Enter your name" class="round-border" * />
+      </label>
+
+      <label id="email-label" for="email">
+        Email
+        <input type="email" required id="email" placeholder="Enter your email" class="round-border" />
+      </label>
+
+      <label id="number-label" for="number">
+        Number
+        <input
+          type="number"
+          required
+          id="number"
+          min="13"
+          max="120"
+          placeholder="Enter your number"
+          class="round-border" />
+      </label>
+
+      <label id="dropdown-label" for="dropdown">
+        Dropdown
+        <select id="dropdown" class="round-border">
+          <option value="1">option 1</option>
+          <option value="2">option 2</option>
+        </select>
+      </label>
+
+      <label id="radio-label">
+        Radio
+        <label>
+          <input type="radio" name="radio-buttons" value="r1" checked />
+          radio 1
+        </label>
+        <label>
+          <input type="radio" name="radio-buttons" value="r2" />
+          radio 2
+        </label>
+      </label>
+
+      <label id="checkboxes-label" for="checkboxes">
+        Checkboxes
+        <label>
+          <input type="checkbox" value="c1" />
+          checkbox 1
+        </label>
+        <label>
+          <input type="checkbox" value="c2" />
+          checkbox 2
+        </label>
+        <label>
+          <input type="checkbox" value="c3" />
+          checkbox 3
+        </label>
+      </label>
+
+      <textarea id="textarea" placeholder="Tell us more..." rows="5" class="round-border"></textarea>
+
+      <input id="submit" type="submit" value="Submit" class="round-border" />
+    </form>
+  </body>
+</html>
