@@ -1,0 +1,88 @@
+* {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 1rem 10px;
+  color: #333333;
+  background-color: white;
+}
+
+#main {
+  background-color: #eeeeee;
+  margin: 10px 2px;
+  text-align: center;
+}
+
+#title {
+  display: block;
+  margin: 0;
+  padding-top: 25px;
+}
+
+#title + p {
+  margin: 15px 0 20px 0;
+}
+
+#img-div {
+  background-color: #fff;
+  margin: 0 20px;
+  padding: 10px;
+}
+
+#image {
+  display:block;
+  width: 100%;
+  max-width: 100%;
+}
+
+#img-caption {
+  font-size: 0.8rem;
+}
+
+#tribute-info p:first-child {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 25px;
+}
+
+#tribute-info ul {
+  padding: 0;
+  margin: 0px auto;
+  /* width: 50%; */
+  max-width: 400px;
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.3rem;
+}
+
+#tribute-info ul li {
+  margin: 10px 0;
+}
+
+#tribute-info ul li span:first-of-type {
+  font-weight: bold;
+}
+
+#tribute-info p:last-child {
+  margin: 40px 0;
+  font-style: italic;
+}
+
+#tribute-info + p {
+  padding: 0 10px;
+  padding-bottom: 40px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+#tribute-link {
+  color: #477ca7;
+}
+
+.round-border {
+  border: none;
+  border-radius: 10px;
+}
