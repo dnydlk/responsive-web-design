@@ -1,0 +1,314 @@
+:root {
+  --background-color: #f1f1f1;
+  --font-color: #2a2a2a;
+  --gryffindor-red: #89140a;
+  --gryffindor-red-light: #b92012;
+  --bronze: #bc7f40;
+  --silver: silver;
+  --gold: gold;
+  --gray: #dfdfdf;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* Default is 16px, not is 10px */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: var(--background-color);
+  color: var(--font-color);
+}
+
+#header {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--background-color);
+}
+
+#header-img {
+  width: 300px;
+  margin-right: 20px;
+}
+
+#nav-bar {
+  margin-right: 10px;
+  margin-top: 19px;
+}
+
+.nav-link {
+  font-size: 2.2rem;
+  margin-top: 40px;
+  margin-right: 4vw;
+  text-decoration: none;
+  color: var(--font-color);
+  font-family: "Harry Potter";
+  letter-spacing: 1px;
+}
+
+@media (min-width: 490px) and (max-width: 720px) {
+  .nav-link {
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 2rem;
+    margin-top: 0;
+  }
+  #nav-bar {
+    margin-top: 0.4rem;
+  }
+  #header-img {
+    width: 41vw;
+    margin-right: 20px;
+  }
+}
+
+.nav-link:hover {
+  color: var(--gryffindor-red);
+}
+
+main {
+  padding-top: 100px;
+  text-align: center;
+}
+
+#form {
+  align-items: center;
+  padding-top: 4rem;
+}
+
+.header {
+  font-family: "Harry Potter";
+  font-size: 4rem;
+  word-spacing: 5px;
+  letter-spacing: 1px;
+}
+
+.header span {
+  font-family: "Magic School Two";
+  font-size: 1.35em;
+}
+
+#email {
+  display: block;
+  margin: 2rem auto;
+  width: 28rem;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.6rem;
+  color: var(--gryffindor-red);
+}
+
+.olvd-button {
+  display: block;
+  margin: 2rem auto;
+  padding: 1rem 1.4rem 1rem 1.4rem;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--gryffindor-red);
+  color: linen;
+  font-weight: bold;
+}
+
+#submit:hover {
+  background-color: var(--gryffindor-red-light);
+  cursor: pointer;
+}
+
+#submit:active {
+  background-color: var(--gryffindor-red);
+}
+
+.main-section {
+  scroll-margin-top: 100px;
+  padding-top: 8rem;
+}
+
+.main-section:last-of-type {
+  margin-bottom: 5rem;
+}
+
+.sub-header {
+  font-family: "Harry Potter";
+  font-size: 3.4rem;
+  word-spacing: 5px;
+  letter-spacing: 1px;
+}
+
+.text-wrapper {
+  /* border: 1px solid red; */
+  display: block;
+  margin: 2rem auto;
+  text-align: left;
+  width: 55%;
+}
+
+@media (max-width: 490px) {
+  .nav-link {
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-right: 0vw;
+  }
+  #nav-bar {
+    margin-top: 0.4rem;
+  }
+  #header-img {
+    width: 55vw;
+    margin-right: 20px;
+  }
+  .text-wrapper {
+    display: block;
+    margin: 2rem auto;
+    text-align: left;
+    width: 85%;
+  }
+}
+
+.text-big {
+  font-size: 2.6rem;
+  margin: 1.8rem auto;
+}
+
+.text {
+  font-size: 2rem;
+}
+
+.price-selections {
+  /* margin: 0 20rem; */
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 21rem);
+  column-gap: 2rem;
+  max-width: fit-content;
+}
+
+.item-bronze {
+  border: 2px solid var(--bronze);
+  grid-column: 1/2;
+}
+
+.item-silver {
+  border: 2px solid var(--silver);
+  grid-column: 2/3;
+}
+
+.item-gold {
+  border: 2px solid var(--gold);
+  grid-column: 3/4;
+}
+
+@media (max-width: 975px) {
+  .price-selections {
+    grid-template-rows: repeat(3, 3fr);
+    grid-template-columns: repeat(3, 56px);
+    row-gap: 2rem;
+  }
+
+  .item-bronze,
+  .item-silver,
+  .item-gold {
+    grid-column: 1/-1;
+  }
+}
+
+.item-header {
+  background-color: var(--gray);
+  padding-top: 1.2rem;
+  font-family: "Harry Potter";
+  font-size: 2.8rem;
+  word-spacing: 5px;
+  letter-spacing: 1px;
+}
+
+.item-price {
+  font-family: "Magic School Two";
+  font-size: 3.2em;
+}
+
+.item-bronze .item-price span {
+  color: var(--bronze);
+}
+
+.item-silver .item-price span {
+  color: var(--silver);
+}
+
+.item-gold .item-price span {
+  color: var(--gold);
+}
+
+.item-button {
+  display: block;
+  margin: 1rem auto;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--gryffindor-red);
+}
+
+.item-bronze .item-button {
+  background-color: var(--bronze);
+}
+
+.item-silver .item-button {
+  background-color: var(--silver);
+}
+
+.item-gold .item-button {
+  background-color: var(--gold);
+}
+
+.item-button:hover {
+  background-color: var(--gryffindor-red-light);
+  cursor: pointer;
+}
+
+.item-button:active {
+  background-color: var(--gryffindor-red);
+}
+
+.item-button img {
+  width: 7rem;
+  height: 7rem;
+}
+
+.items-margin {
+  margin-bottom: 2rem;
+}
+
+footer {
+  display: block;
+  background-color: var(--gray);
+  font-size: 1.4rem;
+  text-align: end;
+}
+
+footer > * {
+  padding: 0.1rem 0.4rem;
+}
+
+.de-linked-text {
+  text-decoration: none;
+  color: var(--font-color);
+}
