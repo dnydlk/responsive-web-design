@@ -1,0 +1,247 @@
+:root {
+  --top: 60px;
+  --eerie-black: #222222;
+  --bitter-sweet: #ed6a5a;
+  --cerulean: #437f97;
+  --honeydew: #e8f7ee;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/*- -----------------header------------------ -*/
+header {
+  position: fixed;
+  top: 0;
+}
+
+#navbar ul {
+  background-color: var(--cerulean);
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100vw;
+  margin-right: 2rem;
+}
+
+#navbar li {
+  list-style: none;
+}
+
+#navbar li:last-of-type {
+  margin-right: 2rem;
+}
+
+#navbar a {
+  display: block;
+  font-size: 3rem;
+  text-decoration: none;
+  padding: 1.8rem;
+  color: var(--eerie-black);
+}
+
+#navbar a:hover {
+  background-color: var(--honeydew);
+}
+
+/*- ------------------main------------------ -*/
+.full-page {
+  scroll-margin-top: calc(var(--top) + 10px);
+  width: 100vw;
+  /* height: calc(100vh - var(--top)) */
+  height: 100vh;
+}
+
+/*- ------------welcome-section------------- -*/
+#welcome-section {
+  background-color: var(--eerie-black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  line-height: 4rem;
+}
+
+#welcome-section h1 {
+  font-size: 3rem;
+}
+
+#welcome-section p {
+  font-size: 2.4rem;
+  font-weight: 100;
+}
+
+/*- ---------------projects---------------- -*/
+#projects {
+  background-color: var(--bitter-sweet);
+  height: max(100%, fit-content);
+}
+
+.project-title-big {
+  display: block;
+  width: fit-content;
+  font-size: 4rem;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+.grid-container {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  height: 80%;
+  margin: 0 auto;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-rows: minmax(80px, 300px) minmax(80px, 300px);
+  grid-template-columns: minmax(100px, 450px) minmax(100px, 450px);
+  grid-gap: 2rem;
+}
+
+.project-grid a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  height: fit-content;
+  max-height: 250px;
+  width: fit-content;
+}
+
+.project-title {
+  background-color: var(--eerie-black);
+  color: white;
+  padding: 1rem 0;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.project-title::before {
+  content: "< ";
+}
+
+.project-title::after {
+  content: " />";
+}
+
+.project-title:hover {
+  color: var(--bitter-sweet);
+}
+
+.project-item {
+  border: 1px solid var(--eerie-black);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.project-1 {
+  grid-area: 1 1;
+}
+.project-2 {
+  grid-area: 2 3;
+}
+.project-3 {
+  grid-area: 2 2;
+}
+.project-4 {
+  grid-area: 3 2;
+}
+
+@media (max-width: 650px) {
+  .project-grid {
+    display: grid;
+    grid-template-rows: minmax(250px, 300px) minmax(250px, 300px) minmax(250px, 300px) minmax(250px, 300px);
+    grid-template-columns: minmax(250px, 300px);
+    grid-gap: 2rem;
+  }
+
+  .project-grid:last-child {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 346px) {
+  .project-grid {
+    display: grid;
+    grid-template-rows: minmax(200px, 300px) minmax(200px, 300px) minmax(200px, 300px) minmax(200px, 300px);
+    grid-template-columns: minmax(250px, 300px);
+    grid-gap: 2rem;
+  }
+
+  .project-grid:last-child {
+    margin-bottom: 2rem;
+  }
+}
+
+/*- ---------------contact----------------- -*/
+#contact {
+  background-color: var(--honeydew);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 4rem;
+}
+
+#contact h1 {
+  display: block;
+  font-size: 3rem;
+}
+
+.contacts {
+  list-style: none;
+  font-size: 2.4rem;
+  margin-top: 1rem;
+}
+
+.contacts li {
+  margin: 1rem;
+}
+
+.contacts li a {
+  text-decoration: none;
+}
+
+.contacts li a:visited {
+  color: var(--eerie-black);
+}
+
+.contacts li a:hover, a[href^="mailto:"]:hover {
+  color: var(--bitter-sweet);
+}
+
+a[href^="mailto:"] {
+  color: var(--eerie-black)
+}
+
+
+
+.contacts li i {
+  font-size: 2.8rem;
+  margin: 0.6rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
