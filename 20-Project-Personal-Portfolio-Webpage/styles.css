@@ -126,7 +126,7 @@ img {
   width: fit-content;
 }
 
-.project-title {
+.project-tile {
   background-color: var(--eerie-black);
   color: white;
   padding: 1rem 0;
@@ -134,15 +134,15 @@ img {
   text-align: center;
 }
 
-.project-title::before {
+.project-tile::before {
   content: "< ";
 }
 
-.project-title::after {
+.project-tile::after {
   content: " />";
 }
 
-.project-title:hover {
+.project-tile:hover {
   color: var(--bitter-sweet);
 }
 
